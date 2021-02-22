@@ -883,6 +883,8 @@ private:
 
     bool HasFp16DisplaySupport();
 
+    bool HasRgba16DisplaySupport();
+
     void CheckSyncObjectSupportStatus();
 
     Result InitGpuProperties();

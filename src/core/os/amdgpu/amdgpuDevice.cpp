@@ -142,6 +142,10 @@ constexpr SwizzledFormat Presentable16BitSwizzledFormat[] =
         ChNumFormat::X16Y16Z16W16_Float,
         { ChannelSwizzle::X, ChannelSwizzle::Y, ChannelSwizzle::Z, ChannelSwizzle::W }
     },
+    {
+        ChNumFormat::X16Y16Z16W16_Unorm,
+        { ChannelSwizzle::X, ChannelSwizzle::Y, ChannelSwizzle::Z, ChannelSwizzle::W }
+    },
 };
 
 // The amdgpu queue semaphores are binary semaphores so their counts are always either zero or one.
@@ -2119,6 +2123,23 @@ bool Device::HasFp16DisplaySupport()
     return supported;
 }
 
+// Returns true if gpu + amdgpu kms driver do support 16 bit unorm fixed point display.
+bool Device::HasRgba16DisplaySupport()
+{
+    bool supported = false;
+
+    // On Linux 5.14 (DRM 3.42) and later we also have the 64 bpp rgba16 unorm fixed point format
+    // on display engines of generation DCE 8.0 - DCE 12, and on all DCN engines, iow. Sea Islands
+    // and later.
+    if ((IsDrmVersionOrGreater(3, 42) || IsKernelVersionEqualOrGreater(5, 14)) &&
+        (IsGfx10Plus(m_chipProperties.gfxLevel) || IsGfx9(*this) || IsGfx8(*this) || IsGfx7(*this)))
+    {
+        supported = true;
+    }
+
+    return supported;
+}
+
 // =====================================================================================================================
 // Swap chain information is related with OS window system, so get all of the information here.
 Result Device::GetSwapChainInfo(
@@ -2156,6 +2177,15 @@ Result Device::GetSwapChainInfo(
 
         // fp16 is first slot in Presentable16BitSwizzledFormat[].
         pSwapChainProperties->imageFormatCount++;
+
+        // All gpu's which support fp16 do also support rgba16 unorm with recent amdgpu kms.
+        if (HasRgba16DisplaySupport())
+        {
+            PAL_ASSERT(pSwapChainProperties->imageFormatCount < MaxPresentableImageFormat);
+
+            // rgba16 unorm is the second slot in Presentable16BitSwizzledFormat[].
+            pSwapChainProperties->imageFormatCount++;
+        }
     }
 
     for (uint32 i = 0; i < pSwapChainProperties->imageFormatCount; i++)
