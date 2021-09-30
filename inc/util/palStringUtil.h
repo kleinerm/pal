@@ -31,6 +31,8 @@
 
 #pragma once
 
+#include <cstring>
+
 namespace Util
 {
 
@@ -73,6 +75,11 @@ extern void CopyUtf16String(
     wchar_t*       pDst,        ///< [out] Destination string.
     const wchar_t* pSrc,        ///< [in] Source string to copy.
     size_t         dstSize);    ///< Length of the destination buffer, in wchar_t's.
+
+// =====================================================================================================================
+// Automatic helper for wrapping <cstring> length calls.
+inline uint32 StringLength(const char*    s) { return static_cast<uint32>(strlen(s)); }
+inline uint32 StringLength(const wchar_t* s) { return static_cast<uint32>(PalWcslen(s)); }
 
 } // Util
 

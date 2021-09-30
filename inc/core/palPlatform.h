@@ -529,6 +529,11 @@ public:
         va_end(args);
     }
 
+    /// Logs an event using the DevDriver protocol.
+    ///
+    /// @param [in] eventId       The type of event you want to log.
+    /// @param [in] pEventData    A pointer to the struct corresponding to the event id.
+    /// @param [in] eventDataSize The size of the event data struct.
     virtual void LogEvent(
         PalEvent    eventId,
         const void* pEventData,

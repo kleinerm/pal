@@ -2491,6 +2491,8 @@ public:
     virtual const ImageMemoryLayout& GetMemoryLayout() const override
         { return m_pNextLayer->GetMemoryLayout(); }
 
+    virtual const void* GetResourceId() const override { return m_pNextLayer->GetResourceId(); }
+
     virtual Result GetFullSubresourceRange(
         SubresRange* pRange) const override
         { return m_pNextLayer->GetFullSubresourceRange(pRange); }

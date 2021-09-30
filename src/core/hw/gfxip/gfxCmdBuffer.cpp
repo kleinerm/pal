@@ -770,13 +770,13 @@ void GfxCmdBuffer::CmdPostProcessFrame(
                 // if Dcc is decompressed, needn't do retile, put displayDCC memory
                 // itself back into a "fully decompressed" state.
                 m_device.RsrcProcMgr().CmdDisplayDccFixUp(this, image);
+                addedGpuWork = true;
             }
-            else
+            else if (m_device.CoreSettings().displayDccSkipRetileBlt == false)
             {
                 m_device.RsrcProcMgr().CmdGfxDccToDisplayDcc(this, image);
+                addedGpuWork = true;
             }
-
-            addedGpuWork = true;
         }
     }
 
@@ -1337,7 +1337,7 @@ void GfxCmdBuffer::LeakPerPipelineStateChanges(
             const uint32 entry = (bit + (UserDataEntriesPerMask * index));
             pDestUserDataEntries->entries[entry] = leakedUserDataEntries.entries[entry];
 
-            mask &= ~(1 << bit);
+            mask &= ~static_cast<size_t>(1ull << bit);
         }
     }
 }

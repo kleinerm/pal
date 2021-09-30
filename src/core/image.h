@@ -76,7 +76,7 @@ constexpr gpusize GetOriginalAddress(
 // a 32-bit base address.
 //
 // The maximum number of address bits which GFXIP 6+ supports is 48. Some parts are limited to 40 bits.
-inline uint32 Get256BAddrSwizzled(
+inline uint32 Get256BAddrLoSwizzled(
     gpusize virtAddr,
     uint32  swizzle)
 {
@@ -259,7 +259,6 @@ struct ImageInfo
 class Image : public IImage
 {
 public:
-
     static constexpr ClearMethod DefaultSlowClearMethod = ClearMethod::NormalGraphics;
     static constexpr bool PreferGraphicsCopy = true;
     static constexpr bool ForceExpandHiZRangeForResummarize = false;
@@ -306,6 +305,8 @@ public:
 
     const void* SubresourceTileInfo(uint32 subResId) const
         { return Util::VoidPtrInc(m_pTileInfoList, (subResId * m_tileInfoBytes)); }
+
+    virtual const void* GetResourceId() const override { return this; }
 
     virtual const ImageMemoryLayout& GetMemoryLayout() const override
         { return m_gpuMemLayout; }

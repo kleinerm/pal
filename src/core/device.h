@@ -660,6 +660,8 @@ struct GpuChipProperties
     uint32   vcnEncodeFwInterfaceVersionMinor;  // VCN Video encode firmware interface minor version
     uint32   vcnFwVersionSubMinor;              // VCN Video firmware sub-minor version (revision)
 
+    uint32   pfpUcodeVersion;                   // PFP ucode version for some features
+
     struct
     {
         union
@@ -2545,10 +2547,9 @@ inline bool IsNavi23(const Device& device)
 }
 inline bool IsNavi2x(const Device& device)
 {
-    return (false
-            || IsNavi21(device)
-            || IsNavi22(device)
-            || IsNavi23(device)
+    return (IsNavi21(device) ||
+            IsNavi22(device) ||
+            IsNavi23(device)
            );
 }
 

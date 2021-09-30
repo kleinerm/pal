@@ -8148,14 +8148,38 @@ union DF_PIE_AON_PerfMonCtlHi7 {
 union DF_PIE_AON_PerfMonCtlLo0 {
     struct {
         unsigned int EventSelect_7_0                                              :  8;
-        unsigned int UnitMask                                                     :  8;
+        unsigned int UnitMaskLo                                                   :  8;
         unsigned int                                                              :  3;
         unsigned int DsmTrig                                                      :  1;
-        unsigned int                                                              :  1;
-        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              :  2;
         unsigned int En                                                           :  1;
         unsigned int                                                              :  9;
     } most;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } gfx101;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv21;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv22;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv23;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } vg12_Rn;
 
     unsigned int u32All;
     signed int   i32All;
@@ -8165,14 +8189,38 @@ union DF_PIE_AON_PerfMonCtlLo0 {
 union DF_PIE_AON_PerfMonCtlLo1 {
     struct {
         unsigned int EventSelect_7_0                                              :  8;
-        unsigned int UnitMask                                                     :  8;
+        unsigned int UnitMaskLo                                                   :  8;
         unsigned int                                                              :  3;
         unsigned int DsmTrig                                                      :  1;
-        unsigned int                                                              :  1;
-        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              :  2;
         unsigned int En                                                           :  1;
         unsigned int                                                              :  9;
     } most;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } gfx101;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv21;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv22;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv23;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } vg12_Rn;
 
     unsigned int u32All;
     signed int   i32All;
@@ -8182,14 +8230,38 @@ union DF_PIE_AON_PerfMonCtlLo1 {
 union DF_PIE_AON_PerfMonCtlLo2 {
     struct {
         unsigned int EventSelect_7_0                                              :  8;
-        unsigned int UnitMask                                                     :  8;
+        unsigned int UnitMaskLo                                                   :  8;
         unsigned int                                                              :  3;
         unsigned int DsmTrig                                                      :  1;
-        unsigned int                                                              :  1;
-        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              :  2;
         unsigned int En                                                           :  1;
         unsigned int                                                              :  9;
     } most;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } gfx101;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv21;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv22;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv23;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } vg12_Rn;
 
     unsigned int u32All;
     signed int   i32All;
@@ -8199,14 +8271,38 @@ union DF_PIE_AON_PerfMonCtlLo2 {
 union DF_PIE_AON_PerfMonCtlLo3 {
     struct {
         unsigned int EventSelect_7_0                                              :  8;
-        unsigned int UnitMask                                                     :  8;
+        unsigned int UnitMaskLo                                                   :  8;
         unsigned int                                                              :  3;
         unsigned int DsmTrig                                                      :  1;
-        unsigned int                                                              :  1;
-        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              :  2;
         unsigned int En                                                           :  1;
         unsigned int                                                              :  9;
     } most;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } gfx101;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv21;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv22;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv23;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } vg12_Rn;
 
     unsigned int u32All;
     signed int   i32All;
@@ -8216,14 +8312,38 @@ union DF_PIE_AON_PerfMonCtlLo3 {
 union DF_PIE_AON_PerfMonCtlLo4 {
     struct {
         unsigned int EventSelect_7_0                                              :  8;
-        unsigned int UnitMask                                                     :  8;
+        unsigned int UnitMaskLo                                                   :  8;
         unsigned int                                                              :  3;
         unsigned int DsmTrig                                                      :  1;
-        unsigned int                                                              :  1;
-        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              :  2;
         unsigned int En                                                           :  1;
         unsigned int                                                              :  9;
     } most;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } gfx101;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv21;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv22;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv23;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } vg12_Rn;
 
     unsigned int u32All;
     signed int   i32All;
@@ -8233,14 +8353,38 @@ union DF_PIE_AON_PerfMonCtlLo4 {
 union DF_PIE_AON_PerfMonCtlLo5 {
     struct {
         unsigned int EventSelect_7_0                                              :  8;
-        unsigned int UnitMask                                                     :  8;
+        unsigned int UnitMaskLo                                                   :  8;
         unsigned int                                                              :  3;
         unsigned int DsmTrig                                                      :  1;
-        unsigned int                                                              :  1;
-        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              :  2;
         unsigned int En                                                           :  1;
         unsigned int                                                              :  9;
     } most;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } gfx101;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv21;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv22;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv23;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } vg12_Rn;
 
     unsigned int u32All;
     signed int   i32All;
@@ -8250,14 +8394,38 @@ union DF_PIE_AON_PerfMonCtlLo5 {
 union DF_PIE_AON_PerfMonCtlLo6 {
     struct {
         unsigned int EventSelect_7_0                                              :  8;
-        unsigned int UnitMask                                                     :  8;
+        unsigned int UnitMaskLo                                                   :  8;
         unsigned int                                                              :  3;
         unsigned int DsmTrig                                                      :  1;
-        unsigned int                                                              :  1;
-        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              :  2;
         unsigned int En                                                           :  1;
         unsigned int                                                              :  9;
     } most;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } gfx101;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv21;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv22;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv23;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } vg12_Rn;
 
     unsigned int u32All;
     signed int   i32All;
@@ -8267,14 +8435,38 @@ union DF_PIE_AON_PerfMonCtlLo6 {
 union DF_PIE_AON_PerfMonCtlLo7 {
     struct {
         unsigned int EventSelect_7_0                                              :  8;
-        unsigned int UnitMask                                                     :  8;
+        unsigned int UnitMaskLo                                                   :  8;
         unsigned int                                                              :  3;
         unsigned int DsmTrig                                                      :  1;
-        unsigned int                                                              :  1;
-        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              :  2;
         unsigned int En                                                           :  1;
         unsigned int                                                              :  9;
     } most;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } gfx101;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv21;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv22;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } nv23;
+    struct {
+        unsigned int                                                              : 21;
+        unsigned int Mp1Int                                                       :  1;
+        unsigned int                                                              : 10;
+    } vg12_Rn;
 
     unsigned int u32All;
     signed int   i32All;
@@ -11885,6 +12077,15 @@ union GRBM_SE2_PERFCOUNTER_SELECT {
         unsigned int GL1CC_BUSY_USER_DEFINED_MASK                                 :  1;
         unsigned int                                                              :  6;
     } gfx10Core;
+    struct {
+        unsigned int                                                              : 23;
+        unsigned int UTCL1_BUSY_USER_DEFINED_MASK                                 :  1;
+        unsigned int TCP_BUSY_USER_DEFINED_MASK                                   :  1;
+        unsigned int GL1CC_BUSY_USER_DEFINED_MASK                                 :  1;
+        unsigned int GL1H_BUSY_USER_DEFINED_MASK                                  :  1;
+        unsigned int PC_BUSY_USER_DEFINED_MASK                                    :  1;
+        unsigned int                                                              :  4;
+    } nv3x;
 
     unsigned int u32All;
     signed int   i32All;
@@ -12318,6 +12519,11 @@ union IA_UTCL1_CNTL {
         unsigned int                                                              :  3;
     } bits, bitfields;
     struct {
+        unsigned int                                                              : 30;
+        unsigned int LLC_NOALLOC_OVERRIDE                                         :  1;
+        unsigned int                                                              :  1;
+    } most;
+    struct {
         unsigned int                                                              : 29;
         unsigned int FORCE_SD_VMID_DIRTY                                          :  1;
         unsigned int                                                              :  2;
@@ -12327,21 +12533,6 @@ union IA_UTCL1_CNTL {
         unsigned int MTYPE_OVERRIDE                                               :  1;
         unsigned int                                                              :  2;
     } gfx10Plus;
-    struct {
-        unsigned int                                                              : 30;
-        unsigned int LLC_NOALLOC_OVERRIDE                                         :  1;
-        unsigned int                                                              :  1;
-    } nv21;
-    struct {
-        unsigned int                                                              : 30;
-        unsigned int LLC_NOALLOC_OVERRIDE                                         :  1;
-        unsigned int                                                              :  1;
-    } nv22;
-    struct {
-        unsigned int                                                              : 30;
-        unsigned int LLC_NOALLOC_OVERRIDE                                         :  1;
-        unsigned int                                                              :  1;
-    } nv23;
 
     unsigned int u32All;
     signed int   i32All;
@@ -18351,17 +18542,21 @@ union RLC_SPM_ACCUM_CTRL {
 
 union RLC_SPM_ACCUM_CTRLRAM_ADDR {
     struct {
-        unsigned int addr                                                         :  9;
-        unsigned int                                                              : 23;
+        unsigned int addr                                                         : 11;
+        unsigned int                                                              : 21;
     } most;
     struct {
-        unsigned int                                                              :  9;
+        unsigned int addr                                                         :  9;
         unsigned int RESERVED                                                     : 23;
     } gfx101;
     struct {
-        unsigned int addr                                                         : 11;
+        unsigned int                                                              : 11;
         unsigned int RESERVED                                                     : 21;
     } gfx103;
+    struct {
+        unsigned int                                                              : 11;
+        unsigned int RESERVED                                                     : 21;
+    } nv3x;
     struct {
         unsigned int addr                                                         :  8;
         unsigned int RESERVED                                                     : 24;
@@ -18446,15 +18641,17 @@ union RLC_SPM_ACCUM_MODE {
         unsigned int                                                              : 31;
     } bits, bitfields;
     struct {
+        unsigned int                                                              : 13;
+        unsigned int SE1_LoadOverride                                             :  1;
+        unsigned int SE1_SwaLoadOverride                                          :  1;
+        unsigned int                                                              : 17;
+    } most;
+    struct {
         unsigned int                                                              :  1;
         unsigned int AutoAccumEn                                                  :  1;
         unsigned int AutoSpmEn                                                    :  1;
         unsigned int Globals_LoadOverride                                         :  1;
         unsigned int SE0_LoadOverride                                             :  1;
-        unsigned int                                                              : 27;
-    } most;
-    struct {
-        unsigned int                                                              :  5;
         unsigned int SE1_LoadOverride                                             :  1;
         unsigned int AutoResetPerfmonDisable                                      :  1;
         unsigned int RESERVED                                                     : 25;
@@ -18481,9 +18678,7 @@ union RLC_SPM_ACCUM_MODE {
         unsigned int                                                              : 27;
     } gfx10Vrs;
     struct {
-        unsigned int                                                              : 13;
-        unsigned int SE1_LoadOverride                                             :  1;
-        unsigned int SE1_SwaLoadOverride                                          :  1;
+        unsigned int                                                              : 15;
         unsigned int SE2_LoadOverride                                             :  1;
         unsigned int SE2_SwaLoadOverride                                          :  1;
         unsigned int SE3_LoadOverride                                             :  1;
@@ -18491,19 +18686,11 @@ union RLC_SPM_ACCUM_MODE {
         unsigned int                                                              : 13;
     } nv21;
     struct {
-        unsigned int                                                              : 13;
-        unsigned int SE1_LoadOverride                                             :  1;
-        unsigned int SE1_SwaLoadOverride                                          :  1;
-        unsigned int                                                              : 17;
-    } nv22;
-    struct {
-        unsigned int                                                              : 13;
-        unsigned int SE1_LoadOverride                                             :  1;
-        unsigned int SE1_SwaLoadOverride                                          :  1;
-        unsigned int                                                              : 17;
-    } nv23;
-    struct {
-        unsigned int                                                              :  5;
+        unsigned int                                                              :  1;
+        unsigned int AutoAccumEn                                                  :  1;
+        unsigned int AutoSpmEn                                                    :  1;
+        unsigned int Globals_LoadOverride                                         :  1;
+        unsigned int SE0_LoadOverride                                             :  1;
         unsigned int AutoResetPerfmonDisable                                      :  1;
         unsigned int RESERVED                                                     : 26;
     } rv2x_Rn;
@@ -18908,6 +19095,14 @@ union RLC_SPM_MC_CNTL {
         unsigned int                                                              : 28;
     } bits, bitfields;
     struct {
+        unsigned int                                                              : 13;
+        unsigned int RLC_SPM_RO                                                   :  1;
+        unsigned int                                                              :  4;
+        unsigned int RLC_SPM_LLC_NOALLOC                                          :  1;
+        unsigned int RLC_SPM_LLC_NOALLOC_OVER                                     :  1;
+        unsigned int                                                              : 12;
+    } most;
+    struct {
         unsigned int                                                              :  4;
         unsigned int RLC_SPM_POLICY                                               :  1;
         unsigned int RLC_SPM_PERF_CNTR                                            :  1;
@@ -18949,30 +19144,6 @@ union RLC_SPM_MC_CNTL {
         unsigned int RLC_SPM_NOFILL                                               :  1;
         unsigned int                                                              : 16;
     } gfx10Plus;
-    struct {
-        unsigned int                                                              : 13;
-        unsigned int RLC_SPM_RO                                                   :  1;
-        unsigned int                                                              :  4;
-        unsigned int RLC_SPM_LLC_NOALLOC                                          :  1;
-        unsigned int RLC_SPM_LLC_NOALLOC_OVER                                     :  1;
-        unsigned int                                                              : 12;
-    } nv21;
-    struct {
-        unsigned int                                                              : 13;
-        unsigned int RLC_SPM_RO                                                   :  1;
-        unsigned int                                                              :  4;
-        unsigned int RLC_SPM_LLC_NOALLOC                                          :  1;
-        unsigned int RLC_SPM_LLC_NOALLOC_OVER                                     :  1;
-        unsigned int                                                              : 12;
-    } nv22;
-    struct {
-        unsigned int                                                              : 13;
-        unsigned int RLC_SPM_RO                                                   :  1;
-        unsigned int                                                              :  4;
-        unsigned int RLC_SPM_LLC_NOALLOC                                          :  1;
-        unsigned int RLC_SPM_LLC_NOALLOC_OVER                                     :  1;
-        unsigned int                                                              : 12;
-    } nv23;
 
     unsigned int u32All;
     signed int   i32All;
@@ -20026,15 +20197,7 @@ union SDMA1_PERFCNT_MISC_CNTL {
     struct {
         unsigned int CMD_OP                                                       : 16;
         unsigned int                                                              : 16;
-    } nv21;
-    struct {
-        unsigned int CMD_OP                                                       : 16;
-        unsigned int                                                              : 16;
-    } nv22;
-    struct {
-        unsigned int CMD_OP                                                       : 16;
-        unsigned int                                                              : 16;
-    } nv23;
+    } most;
 
     unsigned int u32All;
     signed int   i32All;
@@ -20050,25 +20213,7 @@ union SDMA1_PERFCNT_PERFCOUNTER0_CFG {
         unsigned int ENABLE                                                       :  1;
         unsigned int CLEAR                                                        :  1;
         unsigned int                                                              :  2;
-    } nv21;
-    struct {
-        unsigned int PERF_SEL                                                     :  8;
-        unsigned int PERF_SEL_END                                                 :  8;
-        unsigned int                                                              :  8;
-        unsigned int PERF_MODE                                                    :  4;
-        unsigned int ENABLE                                                       :  1;
-        unsigned int CLEAR                                                        :  1;
-        unsigned int                                                              :  2;
-    } nv22;
-    struct {
-        unsigned int PERF_SEL                                                     :  8;
-        unsigned int PERF_SEL_END                                                 :  8;
-        unsigned int                                                              :  8;
-        unsigned int PERF_MODE                                                    :  4;
-        unsigned int ENABLE                                                       :  1;
-        unsigned int CLEAR                                                        :  1;
-        unsigned int                                                              :  2;
-    } nv23;
+    } most;
 
     unsigned int u32All;
     signed int   i32All;
@@ -20084,25 +20229,7 @@ union SDMA1_PERFCNT_PERFCOUNTER1_CFG {
         unsigned int ENABLE                                                       :  1;
         unsigned int CLEAR                                                        :  1;
         unsigned int                                                              :  2;
-    } nv21;
-    struct {
-        unsigned int PERF_SEL                                                     :  8;
-        unsigned int PERF_SEL_END                                                 :  8;
-        unsigned int                                                              :  8;
-        unsigned int PERF_MODE                                                    :  4;
-        unsigned int ENABLE                                                       :  1;
-        unsigned int CLEAR                                                        :  1;
-        unsigned int                                                              :  2;
-    } nv22;
-    struct {
-        unsigned int PERF_SEL                                                     :  8;
-        unsigned int PERF_SEL_END                                                 :  8;
-        unsigned int                                                              :  8;
-        unsigned int PERF_MODE                                                    :  4;
-        unsigned int ENABLE                                                       :  1;
-        unsigned int CLEAR                                                        :  1;
-        unsigned int                                                              :  2;
-    } nv23;
+    } most;
 
     unsigned int u32All;
     signed int   i32All;
@@ -20113,15 +20240,7 @@ union SDMA1_PERFCNT_PERFCOUNTER_HI {
     struct {
         unsigned int COUNTER_HI                                                   : 16;
         unsigned int COMPARE_VALUE                                                : 16;
-    } nv21;
-    struct {
-        unsigned int COUNTER_HI                                                   : 16;
-        unsigned int COMPARE_VALUE                                                : 16;
-    } nv22;
-    struct {
-        unsigned int COUNTER_HI                                                   : 16;
-        unsigned int COMPARE_VALUE                                                : 16;
-    } nv23;
+    } most;
 
     unsigned int u32All;
     signed int   i32All;
@@ -20131,13 +20250,7 @@ union SDMA1_PERFCNT_PERFCOUNTER_HI {
 union SDMA1_PERFCNT_PERFCOUNTER_LO {
     struct {
         unsigned int COUNTER_LO                                                   : 32;
-    } nv21;
-    struct {
-        unsigned int COUNTER_LO                                                   : 32;
-    } nv22;
-    struct {
-        unsigned int COUNTER_LO                                                   : 32;
-    } nv23;
+    } most;
 
     unsigned int u32All;
     signed int   i32All;
@@ -20154,27 +20267,7 @@ union SDMA1_PERFCNT_PERFCOUNTER_RSLT_CNTL {
         unsigned int CLEAR_ALL                                                    :  1;
         unsigned int STOP_ALL_ON_SATURATE                                         :  1;
         unsigned int                                                              :  5;
-    } nv21;
-    struct {
-        unsigned int PERF_COUNTER_SELECT                                          :  4;
-        unsigned int                                                              :  4;
-        unsigned int START_TRIGGER                                                :  8;
-        unsigned int STOP_TRIGGER                                                 :  8;
-        unsigned int ENABLE_ANY                                                   :  1;
-        unsigned int CLEAR_ALL                                                    :  1;
-        unsigned int STOP_ALL_ON_SATURATE                                         :  1;
-        unsigned int                                                              :  5;
-    } nv22;
-    struct {
-        unsigned int PERF_COUNTER_SELECT                                          :  4;
-        unsigned int                                                              :  4;
-        unsigned int START_TRIGGER                                                :  8;
-        unsigned int STOP_TRIGGER                                                 :  8;
-        unsigned int ENABLE_ANY                                                   :  1;
-        unsigned int CLEAR_ALL                                                    :  1;
-        unsigned int STOP_ALL_ON_SATURATE                                         :  1;
-        unsigned int                                                              :  5;
-    } nv23;
+    } most;
 
     unsigned int u32All;
     signed int   i32All;
@@ -31613,55 +31706,66 @@ union SQ_WAVE_HW_ID_LEGACY {
 
 union SQ_WAVE_IB_STS {
     struct {
+        unsigned int                                                              : 26;
+        unsigned int VS_CNT                                                       :  6;
+    } most;
+    struct {
+        unsigned int VM_CNT                                                       :  4;
+        unsigned int EXP_CNT                                                      :  3;
+        unsigned int LGKM_CNT_BIT4                                                :  1;
+        unsigned int LGKM_CNT                                                     :  4;
+        unsigned int VALU_CNT                                                     :  3;
+        unsigned int FIRST_REPLAY                                                 :  1;
+        unsigned int RCNT                                                         :  6;
+        unsigned int VM_CNT_HI                                                    :  2;
+        unsigned int LGKM_CNT_BIT5                                                :  1;
+        unsigned int REPLAY_W64H                                                  :  1;
+        unsigned int                                                              :  6;
+    } gfx101;
+    struct {
+        unsigned int VM_CNT                                                       :  4;
+        unsigned int EXP_CNT                                                      :  3;
+        unsigned int LGKM_CNT_BIT4                                                :  1;
+        unsigned int LGKM_CNT                                                     :  4;
+        unsigned int VALU_CNT                                                     :  3;
+        unsigned int                                                              :  7;
+        unsigned int VM_CNT_HI                                                    :  2;
+        unsigned int LGKM_CNT_BIT5                                                :  1;
+        unsigned int                                                              :  7;
+    } nv21;
+    struct {
+        unsigned int VM_CNT                                                       :  4;
+        unsigned int EXP_CNT                                                      :  3;
+        unsigned int LGKM_CNT_BIT4                                                :  1;
+        unsigned int LGKM_CNT                                                     :  4;
+        unsigned int VALU_CNT                                                     :  3;
+        unsigned int                                                              :  7;
+        unsigned int VM_CNT_HI                                                    :  2;
+        unsigned int LGKM_CNT_BIT5                                                :  1;
+        unsigned int                                                              :  7;
+    } nv22;
+    struct {
+        unsigned int VM_CNT                                                       :  4;
+        unsigned int EXP_CNT                                                      :  3;
+        unsigned int LGKM_CNT_BIT4                                                :  1;
+        unsigned int LGKM_CNT                                                     :  4;
+        unsigned int VALU_CNT                                                     :  3;
+        unsigned int                                                              :  7;
+        unsigned int VM_CNT_HI                                                    :  2;
+        unsigned int LGKM_CNT_BIT5                                                :  1;
+        unsigned int                                                              :  7;
+    } nv23;
+    struct {
         unsigned int VM_CNT                                                       :  4;
         unsigned int EXP_CNT                                                      :  3;
         unsigned int                                                              :  1;
         unsigned int LGKM_CNT                                                     :  4;
         unsigned int VALU_CNT                                                     :  3;
-        unsigned int                                                              :  7;
-        unsigned int VM_CNT_HI                                                    :  2;
-        unsigned int                                                              :  8;
-    } most;
-    struct {
-        unsigned int                                                              :  7;
-        unsigned int LGKM_CNT_BIT4                                                :  1;
-        unsigned int                                                              :  7;
-        unsigned int FIRST_REPLAY                                                 :  1;
-        unsigned int RCNT                                                         :  6;
-        unsigned int                                                              :  2;
-        unsigned int LGKM_CNT_BIT5                                                :  1;
-        unsigned int REPLAY_W64H                                                  :  1;
-        unsigned int VS_CNT                                                       :  6;
-    } gfx101;
-    struct {
-        unsigned int                                                              :  7;
-        unsigned int LGKM_CNT_BIT4                                                :  1;
-        unsigned int                                                              : 16;
-        unsigned int LGKM_CNT_BIT5                                                :  1;
-        unsigned int                                                              :  1;
-        unsigned int VS_CNT                                                       :  6;
-    } nv21;
-    struct {
-        unsigned int                                                              :  7;
-        unsigned int LGKM_CNT_BIT4                                                :  1;
-        unsigned int                                                              : 16;
-        unsigned int LGKM_CNT_BIT5                                                :  1;
-        unsigned int                                                              :  1;
-        unsigned int VS_CNT                                                       :  6;
-    } nv22;
-    struct {
-        unsigned int                                                              :  7;
-        unsigned int LGKM_CNT_BIT4                                                :  1;
-        unsigned int                                                              : 16;
-        unsigned int LGKM_CNT_BIT5                                                :  1;
-        unsigned int                                                              :  1;
-        unsigned int VS_CNT                                                       :  6;
-    } nv23;
-    struct {
-        unsigned int                                                              : 15;
         unsigned int FIRST_REPLAY                                                 :  1;
         unsigned int RCNT                                                         :  5;
-        unsigned int                                                              : 11;
+        unsigned int                                                              :  1;
+        unsigned int VM_CNT_HI                                                    :  2;
+        unsigned int                                                              :  8;
     } vg10_Vg12_Vg20_Rv1x_Rv2x;
 
     unsigned int u32All;
@@ -43584,6 +43688,11 @@ union WD_UTCL1_CNTL {
         unsigned int                                                              :  3;
     } bits, bitfields;
     struct {
+        unsigned int                                                              : 30;
+        unsigned int LLC_NOALLOC_OVERRIDE                                         :  1;
+        unsigned int                                                              :  1;
+    } most;
+    struct {
         unsigned int                                                              : 29;
         unsigned int FORCE_SD_VMID_DIRTY                                          :  1;
         unsigned int                                                              :  2;
@@ -43593,21 +43702,6 @@ union WD_UTCL1_CNTL {
         unsigned int MTYPE_OVERRIDE                                               :  1;
         unsigned int                                                              :  2;
     } gfx10Plus;
-    struct {
-        unsigned int                                                              : 30;
-        unsigned int LLC_NOALLOC_OVERRIDE                                         :  1;
-        unsigned int                                                              :  1;
-    } nv21;
-    struct {
-        unsigned int                                                              : 30;
-        unsigned int LLC_NOALLOC_OVERRIDE                                         :  1;
-        unsigned int                                                              :  1;
-    } nv22;
-    struct {
-        unsigned int                                                              : 30;
-        unsigned int LLC_NOALLOC_OVERRIDE                                         :  1;
-        unsigned int                                                              :  1;
-    } nv23;
 
     unsigned int u32All;
     signed int   i32All;

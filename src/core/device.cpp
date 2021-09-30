@@ -493,6 +493,9 @@ Result Device::SetupPublicSettingDefaults()
     m_publicSettings.pipelinePreferredHeap = GpuHeap::GpuHeapInvisible;
     m_publicSettings.depthClampBasedOnZExport = true;
     m_publicSettings.forceWaitPointPreColorToPostIndexFetch = false;
+#if PAL_CLIENT_INTERFACE_MAJOR_VERSION >= 680
+    m_publicSettings.enableExecuteIndirectPacket = false;
+#endif
 
     return ret;
 }
@@ -2339,7 +2342,6 @@ Result Device::GetProperties(
 
             pInfo->gfxipProperties.supportedVrsRates                     = gfx9Props.gfx10.supportedVrsRates;
             pInfo->gfxipProperties.flags.supportVrsWithDsExports         = gfx9Props.gfx10.supportVrsWithDsExports ? 1 : 0;
-
             pInfo->gfxipProperties.rayTracingIp = gfx9Props.rayTracingIp;
 
             pInfo->gfxipProperties.flags.supportSortAgnosticBarycentrics = gfx9Props.supportSortAgnosticBarycentrics;

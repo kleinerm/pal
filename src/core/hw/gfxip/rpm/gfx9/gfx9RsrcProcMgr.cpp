@@ -6988,7 +6988,7 @@ void Gfx10RsrcProcMgr::CopyVrsIntoHtile(
     // image are idle, HTile writes have been flushed down from the DB, and all stale HTile data has been invalidated
     // in the shader caches.
     uint32* pCmdSpace = pCmdStream->ReserveCommands();
-    pCmdSpace += CmdUtil::BuildNonSampleEventWrite(FLUSH_AND_INV_DB_META, pCmdBuffer->GetEngineType(), pCmdSpace);
+    pCmdSpace += m_cmdUtil.BuildNonSampleEventWrite(FLUSH_AND_INV_DB_META, pCmdBuffer->GetEngineType(), pCmdSpace);
     pCmdSpace += m_cmdUtil.BuildWaitOnReleaseMemEventTs(pCmdBuffer->GetEngineType(),
                                                         BOTTOM_OF_PIPE_TS,
                                                         TcCacheOp::InvL1,

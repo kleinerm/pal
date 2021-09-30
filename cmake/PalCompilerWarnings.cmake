@@ -76,6 +76,7 @@ function(pal_compiler_warnings_gnu_or_clang TARGET)
         # Allow usage of nameless struct/union
         -fms-extensions
     )
+
     # Don't complain on asserts, we want to keep them
     add_flag_if_exists(${TARGET} -Wno-tautological-compare HAS_WARN_TAUTOLOGICAL)
     # Only has false positives for computing dword sizes

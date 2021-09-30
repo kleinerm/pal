@@ -412,17 +412,6 @@ Result ComputePipeline::GetShaderStats(
                                                                       m_regs.computePgmHi.bits.DATA);
 
             pShaderStats->common.ldsSizePerThreadGroup = chipProps.gfxip.ldsSizePerThreadGroup;
-
-            AbiReader abiReader(m_pDevice->GetPlatform(), m_pPipelineBinary);
-            result = abiReader.Init();
-
-            MsgPackReader      metadataReader;
-            CodeObjectMetadata metadata;
-
-            if (result == Result::Success)
-            {
-                result = abiReader.GetMetadata(&metadataReader, &metadata);
-            }
         }
     }
 

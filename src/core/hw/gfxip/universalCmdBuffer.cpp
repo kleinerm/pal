@@ -928,5 +928,4 @@ void UniversalCmdBuffer::CmdBindSampleRateImage(
     m_graphicsState.pVrsImage = static_cast<const Image*>(pImage);
     m_graphicsState.dirtyFlags.validationBits.vrsImage = 1;
 }
-
 } // Pal

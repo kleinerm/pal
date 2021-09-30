@@ -35,8 +35,6 @@ set(ADDR_VI_BUILD ON)
 # PAL override for ADDRLIB SI/CI/VI register chip headers
 set(ADDR_SI_CHIP_DIR "${PROJECT_SOURCE_DIR}/src/core/hw/gfxip/gfx6/chip")
 
-# VAM
-
 # GPUOPEN
 
 # PAL override to build GPUOpen without the Metrohash library since PAL has its own.

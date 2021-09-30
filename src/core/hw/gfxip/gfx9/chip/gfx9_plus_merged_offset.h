@@ -3966,6 +3966,50 @@ namespace Nv23
     constexpr unsigned int mmVGT_TF_RING_SIZE_UMD                             = 0xC24E;
 } // namespace Nv23
 
+namespace Nv3x
+{
+    constexpr unsigned int mmCHCG_PERFCOUNTER0_HI                             = 0xD3C9;
+    constexpr unsigned int mmCHCG_PERFCOUNTER0_LO                             = 0xD3C8;
+    constexpr unsigned int mmCHCG_PERFCOUNTER0_SELECT                         = 0xDBC6;
+    constexpr unsigned int mmCHCG_PERFCOUNTER0_SELECT1                        = 0xDBC7;
+    constexpr unsigned int mmCHCG_PERFCOUNTER1_HI                             = 0xD3CB;
+    constexpr unsigned int mmCHCG_PERFCOUNTER1_LO                             = 0xD3CA;
+    constexpr unsigned int mmCHCG_PERFCOUNTER1_SELECT                         = 0xDBC8;
+    constexpr unsigned int mmCHCG_PERFCOUNTER2_HI                             = 0xD3CD;
+    constexpr unsigned int mmCHCG_PERFCOUNTER2_LO                             = 0xD3CC;
+    constexpr unsigned int mmCHCG_PERFCOUNTER2_SELECT                         = 0xDBC9;
+    constexpr unsigned int mmCHCG_PERFCOUNTER3_HI                             = 0xD3CF;
+    constexpr unsigned int mmCHCG_PERFCOUNTER3_LO                             = 0xD3CE;
+    constexpr unsigned int mmCHCG_PERFCOUNTER3_SELECT                         = 0xDBCA;
+    constexpr unsigned int mmGRBM_SE2_PERFCOUNTER_HI                          = 0xD04A;
+    constexpr unsigned int mmGRBM_SE2_PERFCOUNTER_LO                          = 0xD049;
+    constexpr unsigned int mmGRBM_SE2_PERFCOUNTER_SELECT                      = 0xD844;
+    constexpr unsigned int mmGUS_PERFCOUNTER0_CFG                             = 0xDE03;
+    constexpr unsigned int mmGUS_PERFCOUNTER1_CFG                             = 0xDE04;
+    constexpr unsigned int mmGUS_PERFCOUNTER2_HI                              = 0xD641;
+    constexpr unsigned int mmGUS_PERFCOUNTER2_LO                              = 0xD640;
+    constexpr unsigned int mmGUS_PERFCOUNTER2_MODE                            = 0xDE02;
+    constexpr unsigned int mmGUS_PERFCOUNTER2_SELECT                          = 0xDE00;
+    constexpr unsigned int mmGUS_PERFCOUNTER2_SELECT1                         = 0xDE01;
+    constexpr unsigned int mmGUS_PERFCOUNTER_HI                               = 0xD643;
+    constexpr unsigned int mmGUS_PERFCOUNTER_LO                               = 0xD642;
+    constexpr unsigned int mmGUS_PERFCOUNTER_RSLT_CNTL                        = 0xDE05;
+    constexpr unsigned int mmSDMA1_PERFCNT_MISC_CNTL                          = 0xDE2F;
+    constexpr unsigned int mmSDMA1_PERFCNT_PERFCOUNTER0_CFG                   = 0xDE2C;
+    constexpr unsigned int mmSDMA1_PERFCNT_PERFCOUNTER1_CFG                   = 0xDE2D;
+    constexpr unsigned int mmSDMA1_PERFCNT_PERFCOUNTER_HI                     = 0xD66D;
+    constexpr unsigned int mmSDMA1_PERFCNT_PERFCOUNTER_LO                     = 0xD66C;
+    constexpr unsigned int mmSDMA1_PERFCNT_PERFCOUNTER_RSLT_CNTL              = 0xDE2E;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER0_HI                            = 0xD66F;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER0_LO                            = 0xD66E;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER0_SELECT                        = 0xDE30;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER0_SELECT1                       = 0xDE31;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER1_HI                            = 0xD671;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER1_LO                            = 0xD670;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER1_SELECT                        = 0xDE32;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER1_SELECT1                       = 0xDE33;
+} // namespace Nv3x
+
 namespace Oss50
 {
     constexpr unsigned int mmSDMA0_PERFCOUNTER0_HI                            = 0x12CB;
