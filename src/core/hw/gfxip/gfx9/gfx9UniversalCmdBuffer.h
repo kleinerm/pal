@@ -262,12 +262,13 @@ union CachedSettings
         uint64 vrsForceRateFine                          :  1;
         uint64 reserved7                                 :  1;
         uint64 supportsAceOffload                        :  1;
+        uint64 useExecuteIndirectPacket                  :  2;
         uint64 reserved8                  :  9;
         uint64 reserved9                  :  1;
+        uint64 reserved10                 :  1;
         uint64 optimizeDepthOnlyFmt       :  1;
         uint64 has32bPred                 :  1;
-        uint64 reserved                   :  9;
-
+        uint64 reserved                   :  6;
     };
     uint64 u64All;
 };
@@ -533,6 +534,26 @@ public:
         uint32      payloadSize) override;
 
     virtual uint32 CmdInsertExecutionMarker() override;
+
+    gpusize ConstructExecuteIndirectIb2(
+        const IndirectCmdGenerator& gfx9Generator,
+        PipelineBindPoint           bindPoint,
+        const GraphicsPipeline*     pGfxPipeline,
+        gpusize*                    pIb2GpuSize);
+
+    void ExecuteIndirectPacket(
+        const IIndirectCmdGenerator& generator,
+        const IGpuMemory&            gpuMemory,
+        gpusize                      offset,
+        uint32                       maximumCount,
+        gpusize                      countGpuAddr);
+
+    void ExecuteIndirectShader(
+        const IIndirectCmdGenerator& generator,
+        const IGpuMemory&            gpuMemory,
+        gpusize                      offset,
+        uint32                       maximumCount,
+        gpusize                      countGpuAddr);
 
     virtual void CmdExecuteIndirectCmds(
         const IIndirectCmdGenerator& generator,

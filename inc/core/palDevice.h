@@ -637,6 +637,9 @@ struct PalPublicSettings
     /// confirm to make the screen not too noisy.
     bool disableDebugOverlayVisualConfirm;
 #endif
+#if PAL_CLIENT_INTERFACE_MAJOR_VERSION >= 680
+    bool enableExecuteIndirectPacket;
+#endif
 };
 
 /// Defines the modes that the GPU Profiling layer can use when its buffer fills.

@@ -29,8 +29,6 @@ include(PalCompilerWarnings)
 include(CheckCXXCompilerFlag)
 
 function(pal_compiler_options TARGET)
-
-    # Set the C++ standard
     set_target_properties(${TARGET} PROPERTIES
         CXX_STANDARD 11
         CXX_STANDARD_REQUIRED ON
@@ -55,6 +53,10 @@ function(pal_compiler_options TARGET)
             # Disables exception handling
             -fno-exceptions
 
+            # Disable run time type information
+            # This means breaking dynamic_cast and typeid
+            -fno-rtti
+
             # Disable optimizations that assume strict aliasing rules
             -fno-strict-aliasing
 
@@ -69,15 +71,7 @@ function(pal_compiler_options TARGET)
             $<$<CONFIG:Debug>:
                 -Og
             >
-
         )
-
-        # TODO: Investigate why the "$<$<COMPILE_LANGUAGE:CXX>:" is neccessary
-        target_compile_options(${TARGET} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:
-            # Disable run time type information
-            # This means breaking dynamic_cast and typeid
-            -fno-rtti
-        >)
 
         # If we're using a build type that generates debug syms, compress them to save significant disk space.
         check_cxx_compiler_flag(-gz HAS_COMPRESSED_DEBUG)

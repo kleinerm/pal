@@ -156,10 +156,6 @@ function(pal_compile_definitions TARGET)
     endif()
 #endif
 
-    if(PAL_DBG_COMMAND_COMMENTS)
-        target_compile_definitions(${TARGET} PRIVATE PAL_DBG_COMMAND_COMMENTS=1)
-    endif()
-
     # Describe the client
     target_compile_definitions(${TARGET} PUBLIC PAL_CLIENT_${PAL_CLIENT}=1)
 
@@ -201,46 +197,34 @@ function(pal_compile_definitions TARGET)
         endif()
     endif()
 
-    if(PAL_BUILD_LAYERS)
-        target_compile_definitions(${TARGET} PRIVATE PAL_BUILD_LAYERS=1)
+    # Enable cmd buffer logging on debug configs or when the client asks for it
+    target_compile_definitions(${TARGET} PRIVATE
+        $<$<OR:$<CONFIG:Debug>,$<BOOL:${PAL_BUILD_CMD_BUFFER_LOGGER}>>:
+            PAL_BUILD_CMD_BUFFER_LOGGER=1
+        >
+    )
 
-        if(PAL_BUILD_DBG_OVERLAY)
-            target_compile_definitions(${TARGET} PRIVATE PAL_BUILD_DBG_OVERLAY=1)
-        endif()
+    # Enable GPU debugging layer on debug configs or when the client asks for it
+    target_compile_definitions(${TARGET} PRIVATE
+        $<$<OR:$<CONFIG:Debug>,$<BOOL:${PAL_BUILD_GPU_DEBUG}>>:
+            PAL_BUILD_GPU_DEBUG=1
+        >
+    )
 
-        if(PAL_BUILD_GPU_PROFILER)
-            target_compile_definitions(${TARGET} PRIVATE PAL_BUILD_GPU_PROFILER=1)
-        endif()
+    # Enable interface logging on debug configs or when the client asks for it
+    target_compile_definitions(${TARGET} PRIVATE
+        $<$<OR:$<CONFIG:Debug>,$<BOOL:${PAL_BUILD_INTERFACE_LOGGER}>>:
+            PAL_BUILD_INTERFACE_LOGGER=1
+        >
+    )
 
-        # Enable cmd buffer logging on debug configs or when the client asks for it
-        target_compile_definitions(${TARGET} PRIVATE
-            $<$<OR:$<CONFIG:Debug>,$<BOOL:${PAL_BUILD_CMD_BUFFER_LOGGER}>>:
-                PAL_BUILD_CMD_BUFFER_LOGGER=1
-            >
-        )
-
-        # Enable GPU debugging layer on debug configs or when the client asks for it
-        target_compile_definitions(${TARGET} PRIVATE
-            $<$<OR:$<CONFIG:Debug>,$<BOOL:${PAL_BUILD_GPU_DEBUG}>>:
-                PAL_BUILD_GPU_DEBUG=1
-            >
-        )
-
-        # Enable interface logging on debug configs or when the client asks for it
-        target_compile_definitions(${TARGET} PRIVATE
-            $<$<OR:$<CONFIG:Debug>,$<BOOL:${PAL_BUILD_INTERFACE_LOGGER}>>:
-                PAL_BUILD_INTERFACE_LOGGER=1
-            >
-        )
-
-        # Enable pm4 instrumentor on debug configs or when the client asks for it
-        # This needs to be public, see inc/core/palDeveloperHooks.h
-        target_compile_definitions(${TARGET} PUBLIC
-            $<$<OR:$<CONFIG:Debug>,$<BOOL:${PAL_BUILD_PM4_INSTRUMENTOR}>>:
-                PAL_BUILD_PM4_INSTRUMENTOR=1
-            >
-        )
-    endif()
+    # Enable pm4 instrumentor on debug configs or when the client asks for it
+    # This needs to be public, see inc/core/palDeveloperHooks.h
+    target_compile_definitions(${TARGET} PUBLIC
+        $<$<OR:$<CONFIG:Debug>,$<BOOL:${PAL_BUILD_PM4_INSTRUMENTOR}>>:
+            PAL_BUILD_PM4_INSTRUMENTOR=1
+        >
+    )
 
     pal_compile_definitions_gpu(${TARGET})
 

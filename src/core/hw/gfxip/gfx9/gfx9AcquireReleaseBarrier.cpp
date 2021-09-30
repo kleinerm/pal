@@ -2629,6 +2629,7 @@ void Device::BarrierAcquireEvent(
 
         const IGpuEvent* const* ppActiveEvents = ppGpuEvents;
         uint32 activeEventCount                = gpuEventCount;
+        const IGpuEvent* pEvent                = nullptr;
 
         if (bltTransitionCount > 0)
         {
@@ -2698,7 +2699,7 @@ void Device::BarrierAcquireEvent(
             }
 
             // We have internal BLT(s), enable internal event to signal/wait.
-            const IGpuEvent* pEvent = pCmdBuf->GetInternalEvent();
+            pEvent = pCmdBuf->GetInternalEvent();
 
             // Release from BLTs.
             IssueReleaseSyncEvent(pCmdBuf,

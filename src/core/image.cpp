@@ -132,7 +132,7 @@ static_assert(ADDR_TM_LINEAR_GENERAL == 0,
 Image::~Image()
 {
     ResourceDestroyEventData data = {};
-    data.pObj = this;
+    data.pObj = GetResourceId();
     m_pDevice->GetPlatform()->GetEventProvider()->LogGpuMemoryResourceDestroyEvent(data);
 
     if (m_pGfxImage != nullptr)
@@ -762,7 +762,7 @@ Result Image::Init()
         data.type              = ResourceType::Image;
         data.pResourceDescData = static_cast<void*>(&desc);
         data.resourceDescSize  = sizeof(ResourceDescriptionImage);
-        data.pObj              = this;
+        data.pObj              = GetResourceId();
         m_pDevice->GetPlatform()->GetEventProvider()->LogGpuMemoryResourceCreateEvent(data);
     }
 
@@ -950,7 +950,7 @@ Result Image::BindGpuMemory(
         m_vidMem.Update(pGpuMemory, offset);
 
         GpuMemoryResourceBindEventData data = {};
-        data.pObj = this;
+        data.pObj = GetResourceId();
         data.pGpuMemory = pGpuMemory;
         data.requiredGpuMemSize = m_gpuMemSize;
         data.offset = offset;

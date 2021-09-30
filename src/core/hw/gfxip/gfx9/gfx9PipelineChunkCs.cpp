@@ -81,7 +81,6 @@ void PipelineChunkCs::LateInit(
         PAL_ASSERT(IsPow2Aligned(symbol.gpuVirtAddr, 256u));
 
         m_regs.computePgmLo.bits.DATA = Get256BAddrLo(symbol.gpuVirtAddr);
-        PAL_ASSERT(Get256BAddrHi(symbol.gpuVirtAddr) == 0);
     }
 
     if (pUploader->GetPipelineGpuSymbol(Abi::PipelineSymbolType::CsShdrIntrlTblPtr, &symbol) == Result::Success)

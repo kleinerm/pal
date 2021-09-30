@@ -319,17 +319,6 @@ Result ComputePipeline::GetShaderStats(
             pShaderStats->cs.numThreadsPerGroupZ       = m_threadsPerTgZ;
             pShaderStats->common.gpuVirtAddress        = m_chunkCs.CsProgramGpuVa();
             pShaderStats->common.ldsSizePerThreadGroup = chipProps.gfxip.ldsSizePerThreadGroup;
-
-            AbiReader abiReader(m_pDevice->GetPlatform(), m_pPipelineBinary);
-            result = abiReader.Init();
-
-            MsgPackReader      metadataReader;
-            CodeObjectMetadata metadata;
-
-            if (result == Result::Success)
-            {
-                result = abiReader.GetMetadata(&metadataReader, &metadata);
-            }
         }
     }
 

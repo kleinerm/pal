@@ -8292,6 +8292,53 @@ namespace Nv23
     constexpr unsigned int mmWD_ENHANCE_DEFAULT                               = 0xCDCDCDCD;
 } // namespace Nv23
 
+namespace Nv3x
+{
+    constexpr unsigned int mmCB_RMI_GL2_CACHE_CONTROL_DEFAULT                 = 0x8CC0000D;
+    constexpr unsigned int mmCHCG_PERFCOUNTER0_HI_DEFAULT                     = 0x0000;
+    constexpr unsigned int mmCHCG_PERFCOUNTER0_LO_DEFAULT                     = 0x0000;
+    constexpr unsigned int mmCHCG_PERFCOUNTER0_SELECT1_DEFAULT                = 0xFFFFF;
+    constexpr unsigned int mmCHCG_PERFCOUNTER0_SELECT_DEFAULT                 = 0xFFFFF;
+    constexpr unsigned int mmCHCG_PERFCOUNTER1_HI_DEFAULT                     = 0x0000;
+    constexpr unsigned int mmCHCG_PERFCOUNTER1_LO_DEFAULT                     = 0x0000;
+    constexpr unsigned int mmCHCG_PERFCOUNTER1_SELECT_DEFAULT                 = 0x03FF;
+    constexpr unsigned int mmCHCG_PERFCOUNTER2_HI_DEFAULT                     = 0x0000;
+    constexpr unsigned int mmCHCG_PERFCOUNTER2_LO_DEFAULT                     = 0x0000;
+    constexpr unsigned int mmCHCG_PERFCOUNTER2_SELECT_DEFAULT                 = 0x03FF;
+    constexpr unsigned int mmCHCG_PERFCOUNTER3_HI_DEFAULT                     = 0x0000;
+    constexpr unsigned int mmCHCG_PERFCOUNTER3_LO_DEFAULT                     = 0x0000;
+    constexpr unsigned int mmCHCG_PERFCOUNTER3_SELECT_DEFAULT                 = 0x03FF;
+    constexpr unsigned int mmGRBM_SE2_PERFCOUNTER_HI_DEFAULT                  = 0x0000;
+    constexpr unsigned int mmGRBM_SE2_PERFCOUNTER_LO_DEFAULT                  = 0x0000;
+    constexpr unsigned int mmGRBM_SE2_PERFCOUNTER_SELECT_DEFAULT              = 0x0000;
+    constexpr unsigned int mmGUS_PERFCOUNTER0_CFG_DEFAULT                     = 0x0000;
+    constexpr unsigned int mmGUS_PERFCOUNTER1_CFG_DEFAULT                     = 0x0000;
+    constexpr unsigned int mmGUS_PERFCOUNTER2_HI_DEFAULT                      = 0x0000;
+    constexpr unsigned int mmGUS_PERFCOUNTER2_LO_DEFAULT                      = 0x0000;
+    constexpr unsigned int mmGUS_PERFCOUNTER2_MODE_DEFAULT                    = 0x0000;
+    constexpr unsigned int mmGUS_PERFCOUNTER2_SELECT1_DEFAULT                 = 0xFFFFF;
+    constexpr unsigned int mmGUS_PERFCOUNTER2_SELECT_DEFAULT                  = 0xFFFFF;
+    constexpr unsigned int mmGUS_PERFCOUNTER_HI_DEFAULT                       = 0x0000;
+    constexpr unsigned int mmGUS_PERFCOUNTER_LO_DEFAULT                       = 0x0000;
+    constexpr unsigned int mmGUS_PERFCOUNTER_RSLT_CNTL_DEFAULT                = 0x4000000;
+    constexpr unsigned int mmPA_SC_ENHANCE_3_DEFAULT                          = 0x0180;
+    constexpr unsigned int mmSDMA1_PERFCNT_MISC_CNTL_DEFAULT                  = 0x0000;
+    constexpr unsigned int mmSDMA1_PERFCNT_PERFCOUNTER0_CFG_DEFAULT           = 0xFFFF;
+    constexpr unsigned int mmSDMA1_PERFCNT_PERFCOUNTER1_CFG_DEFAULT           = 0xFFFF;
+    constexpr unsigned int mmSDMA1_PERFCNT_PERFCOUNTER_HI_DEFAULT             = 0x0000;
+    constexpr unsigned int mmSDMA1_PERFCNT_PERFCOUNTER_LO_DEFAULT             = 0x0000;
+    constexpr unsigned int mmSDMA1_PERFCNT_PERFCOUNTER_RSLT_CNTL_DEFAULT      = 0x4000000;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER0_HI_DEFAULT                    = 0x0000;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER0_LO_DEFAULT                    = 0x0000;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER0_SELECT1_DEFAULT               = 0xFFFFF;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER0_SELECT_DEFAULT                = 0xFFFFF;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER1_HI_DEFAULT                    = 0x0000;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER1_LO_DEFAULT                    = 0x0000;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER1_SELECT1_DEFAULT               = 0xFFFFF;
+    constexpr unsigned int mmSDMA1_PERFCOUNTER1_SELECT_DEFAULT                = 0xFFFFF;
+    constexpr unsigned int mmSPI_PS_MAX_WAVE_ID_DEFAULT                       = 0x20000FF;
+} // namespace Nv3x
+
 namespace Oss50
 {
     constexpr unsigned int mmSDMA0_PERFCOUNTER0_RESULT_DEFAULT                = 0x0000;

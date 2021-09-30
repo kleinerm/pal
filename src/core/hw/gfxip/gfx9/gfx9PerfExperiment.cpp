@@ -2533,9 +2533,7 @@ MuxselEncoding PerfExperiment::BuildMuxselEncoding(
     {
         uint32 counterId = counter;
 
-        if (HasRmiSubInstances(block)
-            && (m_chipProps.gfxLevel < GfxIpLevel::GfxIp10_3)
-            )
+        if (HasRmiSubInstances(block) && (m_chipProps.gfxLevel < GfxIpLevel::GfxIp10_3))
         {
             // Use a non-default mapping of counter select IDs for the RMI block. This changes the counter
             // mapping from {0,..7} to {4,5,6,7,0,1,2,3}
@@ -2995,7 +2993,7 @@ uint32* PerfExperiment::WriteStopThreadTraces(
                 // Use COPY_DATA to read back the info struct one DWORD at a time.
                 const gpusize infoAddr = m_gpuMemory.GpuVirtAddr() + m_sqtt[idx].infoOffset;
 
-                // If each member doesn't start at a DWORD offset this won't wor.
+                // If each member doesn't start at a DWORD offset this won't work.
                 static_assert(offsetof(ThreadTraceInfoData, curOffset)    == 0,                  "");
                 static_assert(offsetof(ThreadTraceInfoData, traceStatus)  == sizeof(uint32),     "");
                 static_assert(offsetof(ThreadTraceInfoData, writeCounter) == sizeof(uint32) * 2, "");
@@ -3167,7 +3165,7 @@ uint32* PerfExperiment::WriteSelectRegisters(
                     regDF_PIE_AON_PerfMonCtlLo0 perfmonCtlLo = {};
                     regDF_PIE_AON_PerfMonCtlHi0 perfmonCtlHi = {};
                     perfmonCtlLo.most.En                = 1;  // 1=enable
-                    perfmonCtlLo.most.UnitMask          = m_select.df.perfmonConfig[idx].eventUnitMask;
+                    perfmonCtlLo.most.UnitMaskLo        = m_select.df.perfmonConfig[idx].eventUnitMask;
                     const uint32 eventSelect            = m_select.df.perfmonConfig[idx].eventSelect;
                     perfmonCtlLo.most.EventSelect_7_0   = BitExtract(eventSelect, 0,  7);
                     perfmonCtlHi.most.EventSelect_11_8  = BitExtract(eventSelect, 8,  11);

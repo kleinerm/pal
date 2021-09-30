@@ -3790,8 +3790,8 @@ void RsrcProcMgr::HwlDecodeImageViewSrd(
                 const auto*    pTileInfo   = AddrMgr1::GetTileInfo(&dstImage, i);
                 const auto     srdBaseAddr = (static_cast<gpusize>(srd.word1.bits.BASE_ADDRESS_HI) << 32ull) +
                                               srd.word0.bits.BASE_ADDRESS;
-                const gpusize  subResAddr  = Get256BAddrSwizzled(dstImage.GetSubresourceBaseAddr(i),
-                                                                 pTileInfo->tileSwizzle);
+                const gpusize  subResAddr  = Get256BAddrLoSwizzled(dstImage.GetSubresourceBaseAddr(i),
+                                                                   pTileInfo->tileSwizzle);
 
                 if (srdBaseAddr == subResAddr)
                 {
